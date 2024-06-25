@@ -10,9 +10,10 @@ import {
   isArray,
   isPromise,
 } from "./isType";
+import { isEObject, isEArray } from "./isEmpty";
 import { toArray } from "./toType";
 import { capitalize } from "./toStyle";
-import { isEmptyObj, isEmptyArray } from "./isEmpty";
+import { ig, big } from "./generator";
 
 export {
   typeOf,
@@ -26,12 +27,12 @@ export {
   isArray,
   isPromise,
   //
-  isEmptyObj,
-  isEmptyArray,
-  //
+  isEObject,
+  isEArray,
   toArray,
-  //
   capitalize,
+  ig,
+  big,
 };
 
 /*

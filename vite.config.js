@@ -13,38 +13,18 @@ export default defineConfig({
     NODE_ENV: JSON.stringify(NODE_ENV),
     VERSION: JSON.stringify(VERSION),
   },
-  plugins: [
-    dts({
-      include: ["src/**/*.ts"],
-      exclude: ["node_modules"],
-      compilerOptions: {
-        /* type checking */
-        strict: true,
-        /* modules */
-        /* interop constraints */
-        esModuleInterop: true,
-        forceConsistentCasingInFileNames: true, // 대소문자 구별
-        isolatedModules: true,
-        /* emit */
-        declaration: true,
-        declarationDir: "./dist/types",
-        removeComments: true,
-      },
-    }),
-  ],
+  plugins: [dts()],
 
   /* build */
   build: {
+    copyPublicDir: false,
     lib: {
       entry: resolve(__dirname, "src", "index.ts"),
       name: "Utls",
       fileName: "utls",
     },
     rollupOptions: { input: "src/index.ts" },
-    outDir: "./dist",
     emptyOutDir: true,
-    sourceMap: true,
-    copyPublicDir: false,
   },
 });
 

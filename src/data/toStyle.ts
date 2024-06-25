@@ -1,4 +1,4 @@
-function capitalize(text) {
-  return text[0].toUpperCase() + text.slice(1);
+function capitalize(v: string): string {
+  return v[0].toUpperCase() + v.slice(1);
 }
 export { capitalize };

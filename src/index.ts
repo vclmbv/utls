@@ -9,6 +9,13 @@ import {
   isClass,
   isArray,
   isPromise,
+  //
+  isEObject,
+  isEArray,
+  toArray,
+  capitalize,
+  ig,
+  big,
 } from "./data";
 
 export {
@@ -22,4 +29,11 @@ export {
   isClass,
   isArray,
   isPromise,
+  //
+  isEObject,
+  isEArray,
+  toArray,
+  capitalize,
+  ig,
+  big,
 };

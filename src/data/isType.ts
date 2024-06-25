@@ -1,3 +1,5 @@
+/* comments */
+
 function typeOf(v: any): string {
   const matchResult = Object.prototype.toString.call(v).match(/\s([a-zA-Z]+)/);
   return matchResult ? matchResult[1].toLowerCase() : "unknown";
