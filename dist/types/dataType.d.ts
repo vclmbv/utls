@@ -1,0 +1,10 @@
+declare function isUndefined(v: any): v is undefined;
+declare function isString(v: any): v is string;
+declare function isNumber(v: any): v is number;
+declare function isBoolean(v: any): v is boolean;
+declare function isObject(v: any): v is object;
+declare function isFunction(v: any): v is (...args: any[]) => any;
+declare function isClass(v: any): boolean;
+declare function isArray(v: any): boolean;
+declare function isPromise(v: any): v is Promise<any>;
+export { isUndefined, isString, isNumber, isBoolean, isObject, isFunction, isClass, isArray, isPromise, };

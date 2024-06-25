@@ -1,0 +1,52 @@
+{
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    /* type checking */
+    "strict": true,
+    /* modules */
+    "resolvePackageJsonImports": false,
+    "resolvePackageJsonExports": false,
+    /* interop constraints */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true, // 대소문자 구별
+    "isolatedModules": true,
+    /* emit */
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "outDir": "./dist",
+    "removeComments": true,
+    "sourceMap": true
+  }
+}
+
+/* vite
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "CommonJS",
+    "lib": ["DOM", "ES2015"],
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "sourceMap": true
+  },
+  "include": ["src/**.ts"],
+  "exclude": ["node_modules"]
+}
+*/
+
+/* webpack
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "ESNext",
+    "lib": ["ES6", "DOM"],
+    "declaration": true,
+    "strict": true
+  }
+}
+*/
