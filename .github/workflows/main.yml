@@ -1,4 +1,4 @@
-name: Semantic-release
+name: Build & Release
 
 on: 
   push:
@@ -23,5 +23,11 @@ jobs:
           cache: npm
           node-version: "lts/*"
           registry-url: "https://npm.pkg.github.com/"
-          scope: '@github-id'
+          scope: '@vclmbv'
+      - run: npm ci
+      - run: npm run build
+      - run: npm run version
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       
