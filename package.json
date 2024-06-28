@@ -3,14 +3,14 @@
   "version": "0.0.1",
   "description": "simple utils library",
   "type": "module",
-  "main": "dist/lib.cjs",
-  "module": "dist/lib.js",
-  "types": "dist/types/lib.d.ts",
+  "main": "dist/utls.umd.cjs",
+  "module": "dist/utls.js",
+  "types": "dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/lib.js",
-      "require": "./dist/lib.cjs",
-      "types": "./dist/types/lib.d.ts"
+      "import": "./dist/utls.js",
+      "require": "./dist/utls.umd.cjs",
+      "types": "./dist/types/index.d.ts"
     }
   },
   "scripts": {
@@ -22,6 +22,8 @@
   "author": "vclmbv",
   "license": "MIT",
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/node": "^20.14.6",
     "nanoid": "^5.0.7",
     "semantic-release": "^24.0.0",
