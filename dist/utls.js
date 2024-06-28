@@ -1,6 +1,10 @@
+import { nanoid as e } from "nanoid";
 function t(n) {
   const r = Object.prototype.toString.call(n).match(/\s([a-zA-Z]+)/);
   return r ? r[1].toLowerCase() : "unknown";
+}
+function c(n) {
+  return t(n) === "null";
 }
 function s(n) {
   return t(n) === "undefined";
@@ -14,61 +18,59 @@ function f(n) {
 function l(n) {
   return t(n) === "boolean";
 }
-function y(n) {
+function p(n) {
   return t(n) === "object";
 }
-function i(n) {
+function o(n) {
   return t(n) === "function" || t(n) === "asyncfunction";
 }
-function b(n) {
-  return i(n) && /^\s*class\s+/.test(n.toString());
+function y(n) {
+  return o(n) && /^\s*class\s+/.test(n.toString());
 }
-function o(n) {
+function i(n) {
   return Array.isArray(n);
 }
-function p(n) {
+function b(n) {
   return Promise.resolve(n) === n;
 }
 function g(n) {
   return n ? n.constructor === Object && Object.keys(n).length === 0 : !0;
 }
-function A(n) {
-  return o(n) && n.length === 0;
+function m(n) {
+  return i(n) && n.length === 0;
 }
-function d(n) {
+function O(n) {
   return Array.prototype.slice.call(n);
 }
-function h(n) {
+function h(n, r) {
+  return Object.prototype.hasOwnProperty.call(n, r);
+}
+function j(n) {
   return n[0].toUpperCase() + n.slice(1);
 }
-const u = "useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict";
-let c = (n = 21) => {
-  let r = "", e = crypto.getRandomValues(new Uint8Array(n));
-  for (; n--; )
-    r += u[e[n] & 63];
-  return r;
-};
-function m(n) {
+function A(n) {
   return `${n}${Math.floor(Math.random() * 1e8).toString(16)}`;
 }
-function j() {
-  return c(10);
+function d() {
+  return e(10);
 }
 export {
-  j as big,
-  h as capitalize,
-  m as ig,
-  o as isArray,
+  d as big,
+  j as capitalize,
+  h as hasOwnProperty,
+  A as ig,
+  i as isArray,
   l as isBoolean,
-  b as isClass,
-  A as isEArray,
+  y as isClass,
+  m as isEArray,
   g as isEObject,
-  i as isFunction,
+  o as isFunction,
+  c as isNull,
   f as isNumber,
-  y as isObject,
-  p as isPromise,
+  p as isObject,
+  b as isPromise,
   a as isString,
   s as isUndefined,
-  d as toArray,
+  O as toArray,
   t as typeOf
 };

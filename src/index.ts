@@ -1,5 +1,6 @@
 import {
   typeOf,
+  isNull,
   isUndefined,
   isString,
   isNumber,
@@ -13,6 +14,7 @@ import {
   isEObject,
   isEArray,
   toArray,
+  hasOwnProperty,
   capitalize,
   ig,
   big,
@@ -20,6 +22,7 @@ import {
 
 export {
   typeOf,
+  isNull,
   isUndefined,
   isString,
   isNumber,
@@ -33,6 +36,7 @@ export {
   isEObject,
   isEArray,
   toArray,
+  hasOwnProperty,
   capitalize,
   ig,
   big,

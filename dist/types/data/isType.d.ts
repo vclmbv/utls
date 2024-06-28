@@ -1,4 +1,5 @@
 declare function typeOf(v: any): string;
+declare function isNull(v: any): v is null;
 declare function isUndefined(v: any): v is undefined;
 declare function isString(v: any): v is string;
 declare function isNumber(v: any): v is number;
@@ -8,4 +9,4 @@ declare function isFunction(v: any): v is (...args: any[]) => any;
 declare function isClass(v: any): boolean;
 declare function isArray(v: any): boolean;
 declare function isPromise(v: any): v is Promise<any>;
-export { typeOf, isUndefined, isString, isNumber, isBoolean, isObject, isFunction, isClass, isArray, isPromise, };
+export { typeOf, isNull, isUndefined, isString, isNumber, isBoolean, isObject, isFunction, isClass, isArray, isPromise, };

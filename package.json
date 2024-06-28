@@ -3,13 +3,19 @@
   "version": "0.0.1",
   "description": "simple utils library",
   "type": "module",
-  "main": "dist/utls.umd.cjs",
-  "module": "dist/utls.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/lib.cjs",
+  "module": "dist/lib.js",
+  "types": "dist/types/lib.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/lib.js",
+      "require": "./dist/lib.cjs",
+      "types": "./dist/types/lib.d.ts"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
     "version": "semantic-release"
   },
   "keywords": [],

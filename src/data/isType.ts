@@ -5,6 +5,9 @@ function typeOf(v: any): string {
   return matchResult ? matchResult[1].toLowerCase() : "unknown";
 }
 
+function isNull(v: any): v is null {
+  return typeOf(v) === "null";
+}
 function isUndefined(v: any): v is undefined {
   return typeOf(v) === "undefined";
 }
@@ -35,6 +38,7 @@ function isPromise(v: any): v is Promise<any> {
 
 export {
   typeOf,
+  isNull,
   isUndefined,
   isString,
   isNumber,

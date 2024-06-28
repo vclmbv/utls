@@ -13,23 +13,34 @@ export default defineConfig({
     NODE_ENV: JSON.stringify(NODE_ENV),
     VERSION: JSON.stringify(VERSION),
   },
-  plugins: [dts()],
+  plugins: [dts({ outDir: "dist/types" })],
 
   /* build */
   build: {
+    outDir: "./dist",
+    emptyOutDir: true,
     copyPublicDir: false,
     lib: {
-      entry: resolve(__dirname, "src", "index.ts"),
+      entry: resolve(__dirname, "src", "/index.ts"),
       name: "Utls",
       fileName: "utls",
+      // formats: ["es", "umd"],
+      // formats이 umd인 경우 multi entry를 사용할 수 없음
+      // fileName: (format, entryName) => `${entryName}.${format}.js`,
     },
-    rollupOptions: { input: "src/index.ts" },
-    emptyOutDir: true,
+    rollupOptions: {
+      external: ["nanoid"],
+      output: {
+        dir: "./dist",
+        globals: { nanoid: "nanoid" },
+      },
+      input: "src/index.ts",
+    },
   },
 });
 
-/*
- dts({
-      tsconfigPath: resolve(__dirname, "tsconfig.json"),
-    }),
+/* 
+pro 모드에서 sourcemap을 생성할 필요는 없지만
+dev 모드에서 생성할 필요는 있음
+아직 어떻게 사용되는지는 알지 못함
 */
