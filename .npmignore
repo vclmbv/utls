@@ -1,0 +1,7 @@
+src/
+node_modules/
+.gitignore
+.npmrc
+release.config.js
+tsconfig.json
+vite.config.js
