@@ -3,8 +3,8 @@ name: Build & Release
 on:
   push:
     branches: ["main"]
-    tags: 
-      - 'v*'
+    tags:
+      - "v*"
 
 permissions:
   contents: read
@@ -32,9 +32,9 @@ jobs:
       - run: |
           npm ci
           npm run build
-          npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
+          npm config set //registry.npmjs.org/:_authToken=${{ secrets.NODE_AUTH_TOKEN }}
           npm config set scope "@vclmbv"
           npm adduser --scope=@vclmbv --registry=https://registry.npmjs.org
           npm run publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
