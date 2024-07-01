@@ -30,7 +30,7 @@
     "dev": "vite",
     "test": "jest",
     "build": "vite build",
-    "publish": "npm publish",
+    "publish": "npm publish @vclmbv/utls --access=public ",
     "version": "semantic-release"
   },
   "devDependencies": {
