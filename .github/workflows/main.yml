@@ -20,12 +20,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          cache: npm
           node-version: "lts/*"
           registry-url: "https://registry.npmjs.org/"
       - run: npm ci
       - run: npm run build
       - run: npm run version
         env: 
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       
