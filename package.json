@@ -1,10 +1,12 @@
 {
-  "name": "@vclmbv/utls",
-  "version": "0.0.1",
+  "name": "@uclmbv/utls",
+  "version": "0.0.2",
   "description": "simple utils library",
   "keywords": [
     "utls"
   ],
+  "author": "uclmbv",
+  "license": "MIT",
   "type": "module",
   "main": "dist/utls.umd.cjs",
   "module": "dist/utls.js",
@@ -16,15 +18,14 @@
       "types": "./dist/types/index.d.ts"
     }
   },
-  "author": "vclmbv",
-  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vclmbv/utls"
+    "url": "https://github.com/uclmbv/utls.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
+  "private": false,
   "scripts": {
     "dev": "vite",
     "test": "jest",
