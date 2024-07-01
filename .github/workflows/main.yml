@@ -32,6 +32,7 @@ jobs:
       - run: |
           npm ci
           npm run build
+          npm login --scope=@vclmbv --registry=https://registry.npmjs.org
           npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
           npm config set scope "@vclmbv"
           npm run publish
