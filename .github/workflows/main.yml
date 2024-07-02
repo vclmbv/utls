@@ -32,6 +32,11 @@ jobs:
       - run: |
           npm ci
           npm run build
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          npm version patch -m "chore(release): %s"
+          git checkout main
+          git push origin main --tags
           npm config set //registry.npmjs.org/:_authToken=${{ secrets.NODE_AUTH_TOKEN }}
           npm config set scope "@vclmbv"
           npm adduser --scope=@vclmbv --registry=https://registry.npmjs.org
