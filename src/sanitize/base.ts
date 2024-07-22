@@ -1,0 +1,18 @@
+const sanitize = {
+  p: {},
+  h1: {},
+  h2: {},
+  h3: {},
+  h4: {},
+  h5: {},
+  h6: {},
+  ol: {},
+  ul: {},
+  li: {},
+  br: true,
+  img: { src: true, width: true, height: true },
+  a: { href: true },
+  b: {},
+  i: {},
+  u: {},
+};

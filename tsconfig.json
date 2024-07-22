@@ -1,0 +1,21 @@
+{
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    /* type checking */
+    "strict": true,
+    /* modules */
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    /* interop constraints */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    /* emit */
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "removeComments": true
+    // "sourceMap": true
+  }
+}
