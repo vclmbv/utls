@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.2.0](https://github.com/vclmbv/utls/compare/v1.1.0...v1.2.0) (2024-07-22)
+
+### Features
+
+* first commit ([b98b75f](https://github.com/vclmbv/utls/commit/b98b75f9ffa79be4d4f0b7fc4f65c556262046a1))
+
 ## [1.1.0](https://github.com/vclmbv/utls/compare/v1.0.0...v1.1.0) (2024-07-22)
 
 ### Features
